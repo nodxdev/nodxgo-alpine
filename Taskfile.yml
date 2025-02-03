@@ -3,26 +3,14 @@
 version: "3"
 
 tasks:
-  codegen:
-    desc: Runs the project code generator
-    cmds:
-      - deno run -A ./codegen.ts
-      - task fmt
-
   test:
     desc: Run all the project tests
-    cmds:
-      - deno test -A
-      - go test ./...
+    cmd: go test ./...
 
   lint:
     desc: Run all the project linters
-    cmds:
-      - deno lint
-      - golangci-lint run ./...
+    cmd: golangci-lint run ./...
 
   fmt:
     desc: Run all the project formatters
-    cmds:
-      - deno fmt
-      - go fmt ./...
+    cmd: go fmt ./...
