@@ -109,7 +109,7 @@ func ExampleXTransition() {
 		alpine.XTransition(),
 	)
 	fmt.Println(node)
-	// Output: <div x-transition=""></div>
+	// Output: <div x-transition></div>
 }
 
 func ExampleXEffect() {
@@ -125,7 +125,7 @@ func ExampleXIgnore() {
 		alpine.XIgnore(),
 	)
 	fmt.Println(node)
-	// Output: <div x-ignore=""></div>
+	// Output: <div x-ignore></div>
 }
 
 func ExampleXRef() {
@@ -141,7 +141,7 @@ func ExampleXCloak() {
 		alpine.XCloak(),
 	)
 	fmt.Println(node)
-	// Output: <div x-cloak=""></div>
+	// Output: <div x-cloak></div>
 }
 
 func ExampleXTeleport() {

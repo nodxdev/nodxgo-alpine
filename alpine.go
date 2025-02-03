@@ -14,8 +14,8 @@ func Template(children ...nodx.Node) nodx.Node {
 }
 
 // X is an attribute that renders a x-[key]="[value]" attribute.
-func X(key string, value string) nodx.Node {
-	return nodx.Attr("x-"+key, value)
+func X(key string, value ...string) nodx.Node {
+	return nodx.Attr("x-"+key, value...)
 }
 
 // XData is an attribute that renders a x-data="[value]" attribute.
@@ -92,7 +92,7 @@ func XFor(value string) nodx.Node {
 //
 // https://alpinejs.dev/directives/transition
 func XTransition() nodx.Node {
-	return X("transition", "")
+	return X("transition")
 }
 
 // XEffect is an attribute that renders a x-effect="[value]" attribute.
@@ -106,7 +106,7 @@ func XEffect(value string) nodx.Node {
 //
 // https://alpinejs.dev/directives/ignore
 func XIgnore() nodx.Node {
-	return X("ignore", "")
+	return X("ignore")
 }
 
 // XRef is an attribute that renders a x-ref="[value]" attribute.
@@ -120,7 +120,7 @@ func XRef(value string) nodx.Node {
 //
 // https://alpinejs.dev/directives/cloak
 func XCloak() nodx.Node {
-	return X("cloak", "")
+	return X("cloak")
 }
 
 // XTeleport is an attribute that renders a x-teleport="[value]" attribute.
