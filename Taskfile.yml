@@ -8,5 +8,19 @@ tasks:
     cmd: deno run -A ./codegen.ts
 
   test:
-    desc: Run the project tests
-    cmd: go test ./...
+    desc: Run all the project tests
+    cmds:
+      - deno test -A
+      - go test ./...
+
+  lint:
+    desc: Run all the project linters
+    cmds:
+      - deno lint
+      - golangci-lint run ./...
+
+  fmt:
+    desc: Run all the project formatters
+    cmds:
+      - deno fmt
+      - go fmt ./...
