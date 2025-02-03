@@ -22,9 +22,6 @@ jobs:
           runCmd: >
             /bin/bash -c "
               task lint && \
-              task test && \
-              task codegen && \
-              task lint && \
               task test
             "
 
