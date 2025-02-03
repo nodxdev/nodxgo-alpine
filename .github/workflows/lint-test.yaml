@@ -20,11 +20,13 @@ jobs:
         with:
           push: never
           runCmd: >
-            task lint && \
-            task test && \
-            task codegen && \
-            task lint && \
-            task test
+            /bin/bash -c "
+              task lint && \
+              task test && \
+              task codegen && \
+              task lint && \
+              task test
+            "
 
   test-matrix:
     name: Test multiple Go versions
