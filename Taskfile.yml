@@ -5,7 +5,9 @@ version: "3"
 tasks:
   codegen:
     desc: Runs the project code generator
-    cmd: deno run -A ./codegen.ts
+    cmds:
+      - deno run -A ./codegen.ts
+      - task fmt
 
   test:
     desc: Run all the project tests
