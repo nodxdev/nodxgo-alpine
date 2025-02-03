@@ -1,0 +1,12 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  codegen:
+    desc: Runs the project code generator
+    cmd: deno run -A ./codegen.ts
+
+  test:
+    desc: Run the project tests
+    cmd: go test ./...
